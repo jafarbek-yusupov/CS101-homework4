@@ -1,13 +1,21 @@
-template <typename T> int floorFunction(T n) {
-    int intp = static_cast<int>(n);
-    if (n > 0 && n != intp){    return intp - 1;}
-    return intp;
+int floorFunction(double num) {
+    if (num == static_cast<int>(num)) {
+        return static_cast<int>(num);
+    }
+    if (num > 0) {
+        return static_cast<int>(num);
+    }
+    return static_cast<int>(num) - 1;
 }
 
-template <typename T> int ceilingFunction(T n) {
-    int intp = static_cast<int>(n);
-    if (n > 0 && n != intp){    return intp + 1;}
-    return intp;
+int ceilingFunction(double num) {
+    if (num == static_cast<int>(num)) {
+        return static_cast<int>(num);
+    }
+    if (num > 0) {
+        return static_cast<int>(num) + 1;
+    }
+    return static_cast<int>(num);
 }
 
 template <typename T> void swap_values(T& a, T& b) {
