@@ -33,7 +33,6 @@ int digitSum(int n) {
     return (n % 10) + digitSum(n / 10);
 }
 // Problem 5
-decimalToBinary
 void decimalToBinary(int n) {
     if (n == 0) {    return;}
     decimalToBinary(n / 2);
