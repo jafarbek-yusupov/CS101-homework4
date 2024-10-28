@@ -27,10 +27,9 @@ int digitSum(int n) {
     return (n % 10) + digitSum(n / 10);
 }
 
-void decimalToBinary(int n) {
-    if (n == 0) {    return;}
-    decimalToBinary(n / 2);
-    std::cout << (n % 2);
+int decimalToBinary(int n) {
+    if (n == 0){    return 0;}
+    return (n % 2) + 10 * decimalToBinary(n / 2);
 }
 
 template <typename T> T midValue(T a, T b, T c) {
